@@ -15,7 +15,7 @@ window.fbAsyncInit = function () {
                     var uid = response.authResponse.userID;
                     var accessToken = response.authResponse.accessToken;
                    FB.api('/me/picture?type=normal', function(response) { // normal/large/squere 
-                        var str="<img id='preview1' src="+ response.data.url +">";
+                        var str="<img crossOrigin = 'Anonymous' id='preview1' src="+ response.data.url +">";
                         $('body').append(str);
                       });
 
